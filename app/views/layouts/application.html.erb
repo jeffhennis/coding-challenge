@@ -6,9 +6,22 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <%= javascript_pack_tag 'application' %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+  <body class="bg-light">
+  	<div class="app" data-behavior="vue">
+	    <header>
+		  <div class="navbar bg-white shadow-sm">
+		    <div class="container d-flex justify-content-between">
+		        <a href="/"><img src="/images/logo.svg"/>
+		        <a href="/new" class="btn btn-primary">New Post</a>
+		    </div>
+		  </div>
+		</header>
+		 <div class="content container">
+	 		<%= yield %>
+		 </div>
+	</div>
+	</body>
 </html>

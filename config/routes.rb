@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
-  resources :posts
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+    scope :/ do
+        get "/"        => "posts#index"
+        get "/new"     => "posts#new"
+        get ":id" => "posts#show"  
+    end
+
+    scope :api do
+        get "/posts"      => "api#posts"
+        get "/create"     => "api#create"
+        get "/edit/:id"   => "api#edit"  
+        get "/delete/:id" => "api#delete"  
+    end
 end
