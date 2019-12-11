@@ -11,9 +11,23 @@ import "bootstrap";
 
 import Vue from 'vue/dist/vue.esm.js';
 import CreatePost from '../post/create.vue';
+import AllPosts from '../post/posts.vue';
+import Post from '../post/post.vue';
+
+
 import TurbolinksAdapter from 'vue-turbolinks';
+import axios from 'axios'
+
+let token = document.getElementsByName('csrf-token')[0].getAttribute('content');
+axios.defaults.headers.common['X-CSRF-Token'] = token;
+axios.defaults.headers.common['Accept'] = 'application/json';
+
 
 Vue.component('create-post', CreatePost);
+Vue.component('posts', AllPosts);
+Vue.component('post', Post);
+
+
 
 document.addEventListener('turbolinks:load', () => {
   const app = new Vue({

@@ -1,17 +1,19 @@
 class PostsController < ApplicationController
+  
+  #Route to place the Posts Vue component
   def index
     render "index"
   end
 
+  #Route to place the Create Vue component
   def new
     render "new"
   end
 
-  def create
-    # Add a new `Post` to the database
+  #Route to place the Create Vue component
+  def show
+    @post_id = params[:post_id]
+    render "show"
   end
 
-  def destroy
-    # Remove a `Post` from the database
-  end
 end

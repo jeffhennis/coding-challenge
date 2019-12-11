@@ -1,5 +1,29 @@
 @import 'bootstrap';
+@import 'font-awesome';
 
 .content{
-	margin-top:100px;
+    margin-top:50px;
+}
+
+.form-group.has-error {
+    input, textarea{
+        border-color: #dc3545;
+    }
+
+    .error-message{
+        width: 100%;
+        margin-top: .25rem;
+        font-size: 80%;
+        color: #dc3545;
+    }
+}
+
+.all-posts{
+    p.post-body{
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
