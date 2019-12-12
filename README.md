@@ -74,3 +74,26 @@ We've included some mockups below to help you visualize this site. Please do not
 
 **Viewing a Single Post**
 ![](docs/assets/post-show.png)
+
+---
+
+## Instructions ##
+This challenge was accomplished by using 3 Vue components and a Rails API to view, create, and delete posts as well as to create, edit, and delete comments of a post.  Run the following commands in your terminal to get up and running.
+
+1. Install all gems
+```
+bundle install
+```
+
+2. Migrate the sqllite db
+```
+bin/rails db:migrate RAILS_ENV=development
+```
+
+3.  Start server
+```
+rails server
+```
+
+3.  Navigate to [http://localhost:3000/](http://localhost:3000/)
+

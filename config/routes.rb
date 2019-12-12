@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
     scope :/ do
         get "/"               => "application#index"
-        get "/posts"               => "posts#index"
+        get "/posts"          => "posts#index"
         get "/post/new"       => "posts#new"
         get "/post/:post_id"  => "posts#show"  
     end
